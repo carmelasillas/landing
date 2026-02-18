@@ -2,7 +2,15 @@
 import { GoogleGenAI } from "@google/genai";
 
 export const generateFatherDayMessage = async (name: string): Promise<string> => {
-  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+  const apiKey = process.env.API_KEY;
+
+  // Si no hay API_KEY o es una de prueba, devolvemos un mensaje fijo elegante
+  if (!apiKey || apiKey === "undefined" || apiKey === "") {
+    console.warn("Ejecutando en modo demo sin API_KEY");
+    return `Estimado ${name}, es un honor invitarle a descubrir el arte de vivir y la cultura en la mejor compañía. En Carmela Ocio Senior, cada día es una celebración de la experiencia.`;
+  }
+
+  const ai = new GoogleGenAI({ apiKey: apiKey });
   try {
     const response = await ai.models.generateContent({
       model: "gemini-3-flash-preview",
