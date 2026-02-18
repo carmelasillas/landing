@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 interface HeroProps {
@@ -16,30 +15,32 @@ const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
           
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-4">
-              <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&q=80&w=600" alt="Encuentro" className="w-full aspect-square object-cover border-4 border-white shadow-lg" />
-              <img src="https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?auto=format&fit=crop&q=80&w=600" alt="Amistad" className="w-full aspect-square object-cover border-4 border-white shadow-lg" />
+              <img src="https://images.unsplash.com/photo-1550005809-91ad75fb315f?auto=format&fit=crop&q=80&w=600" alt="Padre e hijo" className="w-full aspect-square object-cover border-4 border-white shadow-lg" />
+              <img src="https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?auto=format&fit=crop&q=80&w=600" alt="Amistad Senior" className="w-full aspect-square object-cover border-4 border-white shadow-lg" />
             </div>
             <div className="pt-12 space-y-4">
-              <img src="https://images.unsplash.com/photo-1461280360983-bd93eaa5051b?auto=format&fit=crop&q=80&w=600" alt="Cultura" className="w-full aspect-square object-cover border-4 border-white shadow-lg" />
-              <img src="https://images.unsplash.com/photo-1549057446-9f5c6ac91a04?auto=format&fit=crop&q=80&w=600" alt="Disfrute" className="w-full aspect-square object-cover border-4 border-white shadow-lg" />
+              <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&q=80&w=600" alt="Cultura y vino" className="w-full aspect-square object-cover border-4 border-white shadow-lg" />
+              <img src="https://images.unsplash.com/photo-1549057446-9f5c6ac91a04?auto=format&fit=crop&q=80&w=600" alt="Disfrute de la vida" className="w-full aspect-square object-cover border-4 border-white shadow-lg" />
             </div>
           </div>
         </div>
 
         {/* Text Side */}
         <div className="lg:w-1/2 text-left">
-          <h2 className="text-5xl lg:text-7xl text-carmela-purple mb-8">¿Quien es Carmela?</h2>
+          <div className="inline-block px-4 py-1 bg-carmela-yellow text-carmela-purple font-bold text-xs uppercase tracking-widest mb-6 rounded-sm">
+            Promoción Especial
+          </div>
+          <h2 className="text-5xl lg:text-7xl text-carmela-purple mb-8">Este Día del Padre, regala el arte de vivir.</h2>
           <div className="space-y-6 text-lg font-medium leading-relaxed">
-            <p>Tras dedicar la mitad de mi vida a lo que se supone que debo hacer, ahora estoy haciendo lo que realmente quiero hacer: crear y fomentar amistades entre personas de más de 60 años.</p>
-            <p>Comercial desde que tengo uso de razón, dirigí mis estudios hacia la rama económica, obteniendo la correspondiente licenciatura.</p>
-            <p>Ahora, con este cambio de rumbo, me especialicé en Gerontología y puedo decir que ofrezco un servicio profesional y sobre todo de corazón.</p>
+            <p>¿Buscas un regalo que trascienda lo material? En <strong>Carmela Ocio Senior</strong> creamos experiencias culturales y sociales diseñadas para padres que valoran la calidad, la conversación y las nuevas amistades.</p>
+            <p className="text-2xl font-bold italic text-carmela-purple/80">"Porque cumplir años es un arte, y compartirlo es un privilegio."</p>
           </div>
           
           <button 
             onClick={onCtaClick}
-            className="mt-12 border-2 border-carmela-purple text-carmela-purple font-bold py-4 px-12 hover:bg-carmela-purple hover:text-white transition-all text-xl uppercase tracking-widest"
+            className="mt-12 bg-carmela-purple text-white font-bold py-4 px-12 hover:bg-carmela-yellow hover:text-carmela-purple transition-all text-xl uppercase tracking-widest shadow-xl"
           >
-            ¿Hablamos?
+            Ver Regalos de Experiencia
           </button>
         </div>
       </div>
